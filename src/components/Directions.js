@@ -3,16 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useMap, useMapsLibrary } from '@vis.gl/react-google-maps';
 
-const Directions = ({ driverPosition }) => {
-    const map = useMap();
-    const routesLibraries = useMapsLibrary("routes");
-    const [directionsService, setDirectionsService] = useState(null);
-    const [directionsRenderer, setDirectionsRenderer] = useState(null);
-    const [distance, setDistance] = useState('Calculating distance...');
-    const [time, setTime] = useState('Calculating time...');
-    const [nextStop, setNextStop] = useState('Determining next stop...');
-
-    const waypoints = [
+const waypoints = [
         { name: "Nyabugogo", location: { lat: -1.939826787816454, lng: 30.0445426438232 } }, // Origin
         { name: "Stop A", location: { lat: -1.9355377074007851, lng: 30.060163829002217 } },
         { name: "Stop B", location: { lat: -1.9358808342336546, lng: 30.08024820994666 } },
@@ -21,6 +12,15 @@ const Directions = ({ driverPosition }) => {
         { name: "Stop E", location: { lat: -1.9487480402200394, lng: 30.126596781356923 } },
         { name: "Kimironko", location: { lat: -1.9365670876910166, lng: 30.13020167024439 } } // Destination
     ];
+
+const Directions = ({ driverPosition }) => {
+    const map = useMap();
+    const routesLibraries = useMapsLibrary("routes");
+    const [directionsService, setDirectionsService] = useState(null);
+    const [directionsRenderer, setDirectionsRenderer] = useState(null);
+    const [distance, setDistance] = useState('Calculating distance...');
+    const [time, setTime] = useState('Calculating time...');
+    const [nextStop, setNextStop] = useState('Determining next stop...');
 
     useEffect(() => {
         if (!routesLibraries || !map) return;
