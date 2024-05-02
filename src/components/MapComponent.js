@@ -26,7 +26,7 @@ const MapComponent = () => {
 
   return (
     <div style={{ height: '78vh' }}>
-      <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
+      <APIProvider apiKey={"AIzaSyCMdbCdYlyb_ASfVRgTFoOtxN51rAj3Yrs"}>
         <Map
           defaultZoom={11.8}
           defaultCenter={initialPosition}
