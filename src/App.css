@@ -3,6 +3,26 @@
   margin: 0 auto;
 }
 
+.eta {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  height: 80px;
+}
+
+.eta > p, h3 {
+  padding: 0 10px;
+}
+
+.route-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
 .titleBar {
   width: 100%;
   height: 10vh;

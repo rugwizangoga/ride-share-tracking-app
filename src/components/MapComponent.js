@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import Marker from './Marker';
+import Directions from './Directions';
 
 const MapComponent = () => {
   const initialPosition = { lat: -1.9496286, lng: 30.1263200284355 };
@@ -42,6 +43,7 @@ const MapComponent = () => {
           <Marker position={{ lat: -1.9487480402200394, lng: 30.126596781356923 }} name="Stop E" />
           <Marker position={{ lat: -1.939826787816454, lng: 30.0445426438232 }} name="Nyabugogo" />
           <Marker position={{ lat: -1.9365670876910166, lng: 30.13020167024439 }} name="Kimironko" />
+          <Directions driverPosition={driverPosition} />
         </Map>
       </APIProvider>
     </div>
